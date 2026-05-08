@@ -1,117 +1,512 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Création de sites web professionnels</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uriel SHOP | Boutique Premium</title>
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f172a;
-    color: white;
-}
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-header {
-    padding: 70px 20px;
-    text-align: center;
-}
+  <style>
 
-h1 {
-    font-size: 34px;
-    margin-bottom: 10px;
-}
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
 
-p {
-    font-size: 18px;
-    color: #cbd5e1;
-}
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#0f0f0f;
+      color:white;
+      overflow-x:hidden;
+    }
 
-.btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 15px 30px;
-    background: #25D366;
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-}
+    /* NAVBAR */
 
-.section {
-    padding: 30px 20px;
-    text-align: center;
-}
+    nav{
+      position:fixed;
+      top:0;
+      width:100%;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      z-index:1000;
+      background:rgba(0,0,0,0.55);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
 
-.box {
-    background: #1e293b;
-    margin: 15px auto;
-    padding: 20px;
-    border-radius: 12px;
-    max-width: 400px;
-}
+    .logo{
+      font-size:1.8rem;
+      font-weight:700;
+      color:#fff;
+      letter-spacing:1px;
+    }
 
-.highlight {
-    color: #38bdf8;
-    font-weight: bold;
-}
+    .logo span{
+      color:#d4af37;
+    }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    color: #94a3b8;
-}
-</style>
+    nav ul{
+      display:flex;
+      gap:30px;
+      list-style:none;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:white;
+      font-size:0.95rem;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#d4af37;
+    }
+
+    /* HERO */
+
+    .hero{
+      height:100vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.75)),
+      url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1400&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+    }
+
+    .hero-content{
+      max-width:850px;
+    }
+
+    .hero h1{
+      font-size:4.5rem;
+      margin-bottom:20px;
+      font-weight:700;
+      letter-spacing:2px;
+    }
+
+    .hero h1 span{
+      color:#d4af37;
+    }
+
+    .hero p{
+      color:#ddd;
+      font-size:1.1rem;
+      line-height:1.9;
+      margin-bottom:35px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:15px 35px;
+      background:#d4af37;
+      color:#111;
+      text-decoration:none;
+      border-radius:50px;
+      font-weight:600;
+      transition:0.4s;
+      box-shadow:0 10px 30px rgba(212,175,55,0.3);
+    }
+
+    .btn:hover{
+      transform:translateY(-5px);
+      background:white;
+    }
+
+    /* SECTION */
+
+    section{
+      padding:100px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:2.7rem;
+      margin-bottom:70px;
+      position:relative;
+    }
+
+    .section-title::after{
+      content:'';
+      width:90px;
+      height:4px;
+      background:#d4af37;
+      position:absolute;
+      bottom:-15px;
+      left:50%;
+      transform:translateX(-50%);
+      border-radius:10px;
+    }
+
+    /* GALLERY */
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:30px;
+    }
+
+    .gallery-card{
+      position:relative;
+      overflow:hidden;
+      border-radius:22px;
+      height:430px;
+      cursor:pointer;
+    }
+
+    .gallery-card img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:0.6s;
+    }
+
+    .gallery-card:hover img{
+      transform:scale(1.1);
+    }
+
+    .overlay{
+      position:absolute;
+      inset:0;
+      background:linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+      display:flex;
+      align-items:flex-end;
+      padding:25px;
+    }
+
+    .overlay h3{
+      font-size:1.3rem;
+    }
+
+    /* ABOUT */
+
+    .about{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:60px;
+      align-items:center;
+    }
+
+    .about img{
+      width:100%;
+      border-radius:25px;
+      box-shadow:0 15px 40px rgba(0,0,0,0.4);
+    }
+
+    .about-text h2{
+      font-size:2.7rem;
+      margin-bottom:25px;
+    }
+
+    .about-text p{
+      color:#ccc;
+      line-height:2;
+      margin-bottom:20px;
+    }
+
+    /* SERVICES */
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .service-box{
+      background:#181818;
+      padding:40px 30px;
+      border-radius:22px;
+      transition:0.4s;
+      border:1px solid rgba(255,255,255,0.05);
+    }
+
+    .service-box:hover{
+      transform:translateY(-10px);
+      border-color:#d4af37;
+      box-shadow:0 15px 35px rgba(212,175,55,0.15);
+    }
+
+    .service-box h3{
+      margin-bottom:15px;
+      color:#d4af37;
+    }
+
+    .service-box p{
+      color:#bbb;
+      line-height:1.8;
+    }
+
+    /* CONTACT */
+
+    .contact{
+      background:linear-gradient(135deg,#111,#1d1d1d);
+      border-radius:30px;
+      text-align:center;
+      padding:80px 30px;
+    }
+
+    .contact h2{
+      font-size:2.5rem;
+      margin-bottom:20px;
+    }
+
+    .contact p{
+      color:#ccc;
+      margin-bottom:12px;
+    }
+
+    .contact-buttons{
+      margin-top:30px;
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn-dark{
+      background:white;
+      color:black;
+      box-shadow:none;
+    }
+
+    .btn-dark:hover{
+      background:#d4af37;
+    }
+
+    /* FOOTER */
+
+    footer{
+      padding:30px;
+      text-align:center;
+      color:#888;
+      border-top:1px solid rgba(255,255,255,0.08);
+      margin-top:80px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      nav ul{
+        gap:18px;
+      }
+
+      .hero h1{
+        font-size:2.8rem;
+      }
+
+      .hero p{
+        font-size:1rem;
+      }
+
+      .section-title{
+        font-size:2rem;
+      }
+
+    }
+
+  </style>
 </head>
-
 <body>
 
-<header>
-    <h1>Obtenez plus de clients grâce à un site web professionnel</h1>
-    <p>Je crée des sites modernes qui donnent confiance et attirent des clients</p>
+  <!-- NAVBAR -->
 
-    <a class="btn" href="https://wa.me/22503545832?text=Bonjour%20je%20veux%20un%20site%20web">
-        Discuter sur WhatsApp
-    </a>
-</header>
+  <nav>
 
-<div class="section">
-    <h2>Ce que vous obtenez</h2>
+    <div class="logo">Uriel <span>SHOP</span></div>
 
-    <div class="box">✔ Un site moderne et rapide</div>
-    <div class="box">✔ Compatible téléphone (mobile)</div>
-    <div class="box">✔ Image professionnelle</div>
-    <div class="box">✔ Plus de visibilité sur internet</div>
-</div>
+    <ul>
+      <li><a href="#home">Accueil</a></li>
+      <li><a href="#gallery">Galerie</a></li>
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
 
-<div class="section">
-    <h2>Pourquoi c’est important ?</h2>
-    <p>
-        Aujourd’hui, <span class="highlight">la majorité des clients cherchent en ligne</span>.
-        Sans site web, vous perdez des opportunités chaque jour.
-    </p>
-</div>
+  </nav>
 
-<div class="section">
-    <h2>Témoignage</h2>
-    <div class="box">
-        “Grâce à mon site web, j’ai reçu plus de clients en quelques semaines.”
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <h1>Uriel <span>SHOP</span></h1>
+
+      <p>
+        Découvrez une boutique moderne dédiée à la mode urbaine,
+        aux vêtements tendance et aux accessoires premium.
+        Élégance, style et originalité réunis dans un univers unique.
+      </p>
+
+      <a href="#gallery" class="btn">Découvrir la boutique</a>
+
     </div>
-</div>
 
-<div class="section">
-    <h2>Prêt à commencer ?</h2>
-    <p>Contactez-moi maintenant et obtenez votre site rapidement</p>
+  </section>
 
-    <a class="btn" href="https://wa.me/22503545832?text=Bonjour%20je%20suis%20intéressé">
-        Commencer maintenant
-    </a>
-</div>
+  <!-- GALLERY -->
 
-<footer>
-    © 2026 - Création de sites web
-</footer>
+  <section id="gallery">
+
+    <h2 class="section-title">Notre Collection</h2>
+
+    <div class="gallery">
+
+      <div class="gallery-card">
+        <img src="https://www.genspark.ai/api/files/s/88aGcNSG">
+        <div class="overlay">
+          <h3>Collection Jeans & T-shirts</h3>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="https://www.genspark.ai/api/files/s/W0bsUEj5">
+        <div class="overlay">
+          <h3>Mode Urbaine Premium</h3>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="https://www.genspark.ai/api/files/s/EjXshAsw">
+        <div class="overlay">
+          <h3>Accessoires & Style</h3>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="https://www.genspark.ai/api/files/s/ELMdjSNI">
+        <div class="overlay">
+          <h3>Uriel SHOP Store</h3>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="about">
+
+      <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="about-text">
+
+        <h2>À propos de nous</h2>
+
+        <p>
+          Uriel SHOP propose une expérience moderne inspirée des boutiques premium.
+          Notre mission est d’offrir des vêtements élégants, tendance et accessibles
+          pour tous les passionnés de mode.
+        </p>
+
+        <p>
+          Jeans, sneakers, accessoires, t-shirts et tenues casual :
+          nous sélectionnons chaque article avec attention afin de garantir style,
+          qualité et originalité.
+        </p>
+
+        <a href="#contact" class="btn">Nous contacter</a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SERVICES -->
+
+  <section id="services">
+
+    <h2 class="section-title">Pourquoi nous choisir</h2>
+
+    <div class="services">
+
+      <div class="service-box">
+        <h3>Style Premium</h3>
+        <p>
+          Une sélection moderne inspirée des grandes tendances actuelles.
+        </p>
+      </div>
+
+      <div class="service-box">
+        <h3>Qualité Garantie</h3>
+        <p>
+          Des articles choisis avec soin pour offrir confort et élégance.
+        </p>
+      </div>
+
+      <div class="service-box">
+        <h3>Grande Variété</h3>
+        <p>
+          Jeans, accessoires, sneakers et vêtements pour tous les styles.
+        </p>
+      </div>
+
+      <div class="service-box">
+        <h3>Expérience Unique</h3>
+        <p>
+          Une boutique pensée pour offrir une ambiance moderne et accueillante.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <div class="contact">
+
+      <h2>Contactez Uriel SHOP</h2>
+
+      <p>Mode • Style • Élégance</p>
+
+      <p>Ajoutez ici votre numéro WhatsApp, Instagram ou adresse.</p>
+
+      <div class="contact-buttons">
+
+        <a href="#" class="btn">
+          WhatsApp
+        </a>
+
+        <a href="#" class="btn btn-dark">
+          Instagram
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 Uriel SHOP — Tous droits réservés.
+  </footer>
 
 </body>
 </html>
