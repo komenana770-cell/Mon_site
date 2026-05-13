@@ -3,21 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Beignets Pop Cake | Faits maison avec amour</title>
-  <meta name="description" content="Beignets Pop Cake à Abidjan - Moelleux, gourmands et irrésistibles. Commandez vos saveurs préférées avec livraison possible dans toute la ville." />
+  <title>JEMIMA - Bracelet Brésilien</title>
+  <meta name="description" content="Bracelet brésilien chez JEMIMA - beau, solide et durable. Prix 500f. Contact WhatsApp & Appel : 05 55 95 21 72." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --rose:#f8d7da;
-      --rose-fonce:#d95d7c;
-      --beige:#fff7ef;
-      --creme:#fffaf5;
-      --marron:#6b3e2e;
-      --marron-clair:#9b6b55;
-      --or:#f5c56b;
-      --blanc:#ffffff;
-      --gris:#6f6f6f;
-      --shadow: 0 12px 30px rgba(0,0,0,0.10);
-      --radius: 22px;
+      --blue:#0b3b8f;
+      --blue-dark:#072c6a;
+      --green:#1db46b;
+      --green-dark:#15985a;
+      --bg:#f6f9ff;
+      --text:#172033;
+      --muted:#6f7a90;
+      --white:#ffffff;
+      --shadow:0 18px 45px rgba(10, 44, 106, 0.14);
+      --radius:24px;
     }
 
     *{
@@ -31,9 +33,12 @@
     }
 
     body{
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(180deg, #fffaf7 0%, #fff3f5 100%);
-      color:#2b2b2b;
+      font-family:"Poppins", sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(29,180,107,.10), transparent 22%),
+        radial-gradient(circle at left center, rgba(11,59,143,.08), transparent 24%),
+        var(--bg);
+      color:var(--text);
       line-height:1.6;
     }
 
@@ -48,18 +53,18 @@
     }
 
     .container{
-      width:min(1120px, 92%);
-      margin:auto;
+      width:min(1120px, calc(100% - 32px));
+      margin-inline:auto;
     }
 
     /* HEADER */
     header{
       position:sticky;
       top:0;
-      z-index:1000;
-      background: rgba(255,255,255,0.88);
-      backdrop-filter: blur(12px);
-      border-bottom:1px solid rgba(0,0,0,0.06);
+      z-index:50;
+      background:rgba(255,255,255,.82);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(11,59,143,.08);
     }
 
     .nav{
@@ -71,459 +76,467 @@
     }
 
     .logo{
-      font-size:1.2rem;
+      display:flex;
+      align-items:center;
+      gap:12px;
       font-weight:800;
-      color:var(--marron);
-      letter-spacing:0.3px;
+      color:var(--blue);
+      letter-spacing:.4px;
     }
 
-    .logo span{
-      color:var(--rose-fonce);
+    .logo-badge{
+      width:44px;
+      height:44px;
+      border-radius:50%;
+      background:linear-gradient(135deg, var(--blue), var(--green));
+      display:grid;
+      place-items:center;
+      color:#fff;
+      font-weight:800;
+      box-shadow:var(--shadow);
     }
 
     .nav-links{
       display:flex;
-      gap:22px;
+      gap:24px;
       align-items:center;
-      flex-wrap:wrap;
+      color:var(--muted);
+      font-weight:500;
     }
 
-    .nav-links a{
-      color:#4d4d4d;
-      font-weight:600;
-      font-size:0.95rem;
+    .nav-links a:hover{
+      color:var(--blue);
     }
 
-    .btn{
-      display:inline-block;
-      padding:14px 22px;
+    .nav-cta{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      background:linear-gradient(135deg, var(--green), var(--green-dark));
+      color:#fff;
+      padding:12px 18px;
       border-radius:999px;
-      font-weight:700;
-      transition:0.25s ease;
+      font-weight:600;
+      box-shadow:0 10px 24px rgba(29,180,107,.25);
+      transition:.25s ease;
     }
 
-    .btn-primary{
-      background: linear-gradient(135deg, var(--rose-fonce), #f08aa2);
-      color:white;
-      box-shadow: 0 10px 20px rgba(217, 93, 124, 0.25);
-    }
-
-    .btn-primary:hover{
-      transform: translateY(-2px);
-      opacity:0.96;
-    }
-
-    .btn-outline{
-      border:2px solid var(--marron);
-      color:var(--marron);
-      background:white;
-    }
-
-    .btn-outline:hover{
-      background:var(--marron);
-      color:white;
+    .nav-cta:hover{
+      transform:translateY(-2px);
     }
 
     /* HERO */
     .hero{
-      padding:64px 0 40px;
+      padding:70px 0 40px;
+      overflow:hidden;
     }
 
     .hero-grid{
       display:grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap:36px;
+      grid-template-columns:1.1fr .9fr;
       align-items:center;
+      gap:38px;
     }
 
-    .tag{
-      display:inline-block;
-      background:#ffe6ec;
-      color:var(--rose-fonce);
-      padding:8px 14px;
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 16px;
       border-radius:999px;
-      font-size:0.9rem;
+      background:rgba(29,180,107,.12);
+      color:var(--green-dark);
       font-weight:700;
       margin-bottom:18px;
+      font-size:.92rem;
     }
 
     .hero h1{
-      font-size: clamp(2.2rem, 5vw, 4.2rem);
-      line-height:1.05;
-      color:var(--marron);
-      margin-bottom:18px;
+      font-size:clamp(2.4rem, 5vw, 4.7rem);
+      line-height:1.02;
+      color:var(--blue-dark);
+      font-weight:800;
+      margin-bottom:16px;
     }
 
     .hero h1 span{
-      color:var(--rose-fonce);
+      color:var(--green);
     }
 
     .hero p{
-      color:#5b5b5b;
+      color:var(--muted);
       font-size:1.05rem;
-      margin-bottom:24px;
-      max-width:620px;
+      max-width:600px;
+      margin-bottom:28px;
     }
 
     .hero-actions{
       display:flex;
+      flex-wrap:wrap;
       gap:14px;
-      flex-wrap:wrap;
-      margin-bottom:22px;
+      margin-bottom:28px;
     }
 
-    .hero-points{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-    }
-
-    .hero-points span{
-      background:white;
-      border:1px solid rgba(0,0,0,0.06);
-      padding:10px 14px;
-      border-radius:999px;
-      box-shadow:var(--shadow);
-      font-weight:600;
-      color:#5a463d;
-      font-size:0.92rem;
-    }
-
-    .hero-card{
-      background: linear-gradient(180deg, #fff 0%, #fff5f7 100%);
-      border-radius:32px;
-      padding:20px;
-      box-shadow:var(--shadow);
-      position:relative;
-      overflow:hidden;
-    }
-
-    .hero-card::before{
-      content:"";
-      position:absolute;
-      width:180px;
-      height:180px;
-      background:rgba(217,93,124,0.10);
-      border-radius:50%;
-      top:-50px;
-      right:-40px;
-    }
-
-    .preview-box{
-      background:var(--blanc);
-      border-radius:24px;
-      padding:22px;
-      position:relative;
-      z-index:2;
-      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04);
-    }
-
-    .preview-title{
-      display:flex;
+    .btn{
+      display:inline-flex;
       align-items:center;
-      justify-content:space-between;
+      justify-content:center;
       gap:10px;
-      margin-bottom:14px;
-    }
-
-    .preview-title h3{
-      color:var(--marron);
-      font-size:1.15rem;
-    }
-
-    .badge-smile{
-      background:#fff0c8;
-      color:#8a5b00;
-      padding:8px 12px;
+      border:none;
       border-radius:999px;
-      font-size:0.82rem;
+      padding:14px 22px;
       font-weight:700;
+      cursor:pointer;
+      transition:.25s ease;
     }
 
-    .mini-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:12px;
-      margin-top:14px;
+    .btn-primary{
+      background:linear-gradient(135deg, var(--blue), var(--blue-dark));
+      color:#fff;
+      box-shadow:0 12px 24px rgba(11,59,143,.22);
     }
 
-    .mini-card{
-      border-radius:18px;
-      padding:18px;
-      min-height:120px;
+    .btn-primary:hover,
+    .btn-secondary:hover{
+      transform:translateY(-2px);
+    }
+
+    .btn-secondary{
+      background:#fff;
+      color:var(--blue);
+      border:1px solid rgba(11,59,143,.12);
+      box-shadow:var(--shadow);
+    }
+
+    .hero-meta{
       display:flex;
-      flex-direction:column;
-      justify-content:flex-end;
-      color:white;
-      font-weight:700;
-      box-shadow:var(--shadow);
-    }
-
-    .nature{ background:linear-gradient(135deg, #d7a977, #f1cf9d); }
-    .choco{ background:linear-gradient(135deg, #6b3e2e, #9b6b55); }
-    .biscoff{ background:linear-gradient(135deg, #b86a36, #e3a063); }
-    .oreo{ background:linear-gradient(135deg, #3d3d3d, #6c6c6c); }
-
-    /* SECTION */
-    section{
-      padding:70px 0;
-    }
-
-    .section-head{
-      text-align:center;
-      max-width:760px;
-      margin:0 auto 36px;
-    }
-
-    .section-head h2{
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      color:var(--marron);
-      margin-bottom:12px;
-    }
-
-    .section-head p{
-      color:var(--gris);
-    }
-
-    /* SAVEURS */
-    .flavors{
-      display:grid;
-      grid-template-columns:repeat(5, 1fr);
-      gap:18px;
-    }
-
-    .flavor-card{
-      background:white;
-      border-radius:24px;
-      padding:24px 18px;
-      text-align:center;
-      box-shadow:var(--shadow);
-      border:1px solid rgba(0,0,0,0.04);
-      transition:0.25s ease;
-    }
-
-    .flavor-card:hover{
-      transform:translateY(-6px);
-    }
-
-    .flavor-icon{
-      width:72px;
-      height:72px;
-      margin:0 auto 14px;
-      border-radius:50%;
-      display:grid;
-      place-items:center;
-      font-size:1.8rem;
-      color:white;
-      font-weight:900;
-    }
-
-    .flavor-card h3{
-      color:var(--marron);
-      margin-bottom:8px;
-      font-size:1.1rem;
-    }
-
-    .flavor-card p{
-      color:var(--gris);
-      font-size:0.95rem;
-    }
-
-    /* TARIFS */
-    .pricing-grid{
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:22px;
-    }
-
-    .price-card{
-      background:white;
-      border-radius:28px;
-      padding:28px;
-      box-shadow:var(--shadow);
-      position:relative;
-      overflow:hidden;
-      border:1px solid rgba(0,0,0,0.05);
-    }
-
-    .price-card.highlight{
-      background:linear-gradient(180deg, #fff2f5 0%, #ffffff 100%);
-      border:2px solid #f2b7c5;
-      transform:scale(1.02);
-    }
-
-    .price-card .top{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      margin-bottom:18px;
-      gap:16px;
-    }
-
-    .price-card h3{
-      color:var(--marron);
-      font-size:1.2rem;
-    }
-
-    .price{
-      font-size:2rem;
-      font-weight:900;
-      color:var(--rose-fonce);
-      margin-bottom:10px;
-    }
-
-    .price small{
-      font-size:0.95rem;
-      color:var(--gris);
-      font-weight:600;
-    }
-
-    .price-card ul{
-      list-style:none;
-      margin:16px 0 24px;
-    }
-
-    .price-card li{
-      padding:8px 0;
-      color:#555;
-      border-bottom:1px dashed rgba(0,0,0,0.08);
+      flex-wrap:wrap;
+      gap:14px;
     }
 
     .chip{
-      background:#fff2cf;
-      color:#7c5400;
-      padding:8px 12px;
+      background:#fff;
+      border:1px solid rgba(11,59,143,.08);
       border-radius:999px;
-      font-size:0.82rem;
-      font-weight:800;
-      white-space:nowrap;
+      padding:10px 14px;
+      color:var(--text);
+      font-weight:600;
+      box-shadow:0 8px 18px rgba(0,0,0,.04);
     }
 
-    /* PROMO */
-    .promo{
-      background: linear-gradient(135deg, var(--marron) 0%, #8b5b46 100%);
-      border-radius:32px;
-      padding:36px;
-      color:white;
+    /* VISUAL */
+    .hero-visual{
+      position:relative;
+      min-height:560px;
       display:grid;
-      grid-template-columns:1.1fr 0.9fr;
-      gap:24px;
-      align-items:center;
+      place-items:center;
+    }
+
+    .shape{
+      position:absolute;
+      border-radius:50%;
+      filter:blur(6px);
+      opacity:.95;
+    }
+
+    .shape.one{
+      width:220px;
+      height:220px;
+      background:rgba(29,180,107,.18);
+      top:30px;
+      left:10px;
+    }
+
+    .shape.two{
+      width:280px;
+      height:280px;
+      background:rgba(11,59,143,.14);
+      bottom:40px;
+      right:0;
+    }
+
+    .gallery{
+      position:relative;
+      width:100%;
+      height:100%;
+    }
+
+    .circle-card{
+      position:absolute;
+      width:200px;
+      height:200px;
+      border-radius:50%;
+      background:#fff;
+      padding:10px;
       box-shadow:var(--shadow);
+      border:6px solid rgba(255,255,255,.8);
+      overflow:hidden;
     }
 
-    .promo h2{
-      font-size: clamp(1.8rem, 4vw, 3rem);
-      line-height:1.1;
-      margin-bottom:12px;
+    .circle-card img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      border-radius:50%;
     }
 
-    .promo p{
-      opacity:0.95;
-      margin-bottom:18px;
+    .circle-card.large{
+      width:280px;
+      height:280px;
+      top:135px;
+      left:50%;
+      transform:translateX(-50%);
+      z-index:2;
     }
 
-    .promo-box{
-      background:rgba(255,255,255,0.12);
-      border:1px solid rgba(255,255,255,0.18);
-      border-radius:24px;
-      padding:24px;
-      text-align:center;
+    .circle-card.top-right{
+      top:20px;
+      right:0;
     }
 
-    .promo-box strong{
+    .circle-card.bottom-left{
+      bottom:30px;
+      left:20px;
+    }
+
+    .price-badge{
+      position:absolute;
+      left:0;
+      top:235px;
+      background:linear-gradient(135deg, var(--green), var(--green-dark));
+      color:#fff;
+      padding:18px 22px;
+      border-radius:22px;
+      box-shadow:0 15px 30px rgba(29,180,107,.24);
+      z-index:3;
+    }
+
+    .price-badge small{
       display:block;
-      font-size:1.1rem;
-      margin-bottom:8px;
+      opacity:.9;
+      font-weight:500;
+      margin-bottom:3px;
     }
 
-    .promo-box .free{
-      font-size:3rem;
-      font-weight:900;
-      color:#ffd88b;
+    .price-badge strong{
+      font-size:1.8rem;
+      line-height:1;
     }
 
-    /* LIVRAISON */
-    .info-grid{
+    /* FEATURES */
+    .section{
+      padding:42px 0 24px;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:22px;
+    }
+
+    .section-title h2{
+      font-size:clamp(1.8rem, 3vw, 2.8rem);
+      color:var(--blue-dark);
+      margin-bottom:10px;
+    }
+
+    .section-title p{
+      color:var(--muted);
+      max-width:760px;
+      margin:0 auto;
+    }
+
+    .features{
       display:grid;
       grid-template-columns:repeat(3, 1fr);
       gap:20px;
+      margin-top:28px;
     }
 
-    .info-card{
-      background:white;
-      border-radius:24px;
-      padding:26px;
+    .feature-card{
+      background:#fff;
+      border-radius:var(--radius);
+      padding:28px 24px;
       box-shadow:var(--shadow);
-    }
-
-    .info-card h3{
-      color:var(--marron);
-      margin-bottom:10px;
-    }
-
-    .info-card p{
-      color:var(--gris);
-    }
-
-    /* CTA */
-    .cta{
+      border:1px solid rgba(11,59,143,.06);
       text-align:center;
-      background:linear-gradient(180deg, #fff5f7 0%, #ffffff 100%);
+    }
+
+    .feature-icon{
+      width:68px;
+      height:68px;
+      border-radius:18px;
+      margin:0 auto 16px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg, rgba(11,59,143,.12), rgba(29,180,107,.12));
+      font-size:1.8rem;
+    }
+
+    .feature-card h3{
+      color:var(--blue);
+      margin-bottom:8px;
+      font-size:1.15rem;
+    }
+
+    .feature-card p{
+      color:var(--muted);
+      font-size:.96rem;
+    }
+
+    /* PRODUCT BAND */
+    .band{
+      padding:32px 0;
+    }
+
+    .band-box{
+      background:linear-gradient(135deg, var(--blue), #1148a9 58%, var(--green));
       border-radius:32px;
-      padding:50px 22px;
+      color:#fff;
+      padding:32px;
+      display:grid;
+      grid-template-columns:1fr auto;
+      align-items:center;
+      gap:24px;
+      box-shadow:0 18px 40px rgba(11,59,143,.22);
+    }
+
+    .band-box h3{
+      font-size:clamp(1.5rem, 3vw, 2.3rem);
+      margin-bottom:8px;
+    }
+
+    .band-box p{
+      opacity:.92;
+      max-width:700px;
+    }
+
+    .band-buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .band-buttons a{
+      background:#fff;
+      color:var(--blue);
+      padding:13px 18px;
+      border-radius:999px;
+      font-weight:700;
+    }
+
+    /* CONTACT */
+    .contact{
+      padding:40px 0 70px;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+    }
+
+    .contact-card,
+    .info-card{
+      background:#fff;
+      border-radius:28px;
+      padding:28px;
       box-shadow:var(--shadow);
     }
 
-    .cta h2{
-      color:var(--marron);
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      margin-bottom:10px;
+    .contact-card h3,
+    .info-card h3{
+      color:var(--blue-dark);
+      margin-bottom:14px;
+      font-size:1.35rem;
     }
 
-    .cta p{
-      color:var(--gris);
-      max-width:760px;
-      margin:0 auto 24px;
+    .contact-list{
+      display:grid;
+      gap:14px;
+      margin-top:10px;
+    }
+
+    .contact-item{
+      display:flex;
+      align-items:flex-start;
+      gap:14px;
+      padding:16px;
+      border-radius:18px;
+      background:rgba(11,59,143,.04);
+    }
+
+    .contact-item strong{
+      color:var(--blue);
+      display:block;
+      margin-bottom:2px;
+    }
+
+    .contact-item span{
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    .contact-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:18px;
+    }
+
+    .whatsapp{
+      background:#25D366;
+      color:#fff;
+    }
+
+    .call{
+      background:var(--blue);
+      color:#fff;
+    }
+
+    .info-card ul{
+      list-style:none;
+      display:grid;
+      gap:12px;
+      margin-top:10px;
+    }
+
+    .info-card li{
+      padding:14px 16px;
+      border-left:4px solid var(--green);
+      background:rgba(29,180,107,.08);
+      border-radius:14px;
+      color:var(--text);
+      font-weight:500;
     }
 
     /* FOOTER */
     footer{
-      padding:28px 0 36px;
-      text-align:center;
-      color:#765d53;
-      font-size:0.95rem;
+      background:#081b44;
+      color:rgba(255,255,255,.85);
+      padding:28px 0;
     }
 
-    footer a{
-      color:var(--rose-fonce);
-      font-weight:700;
+    .footer-wrap{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      gap:16px;
+      align-items:center;
+    }
+
+    .footer-wrap p{
+      margin:0;
     }
 
     /* RESPONSIVE */
     @media (max-width: 980px){
       .hero-grid,
-      .promo,
-      .pricing-grid,
-      .info-grid{
+      .contact-grid,
+      .band-box{
         grid-template-columns:1fr;
       }
 
-      .flavors{
-        grid-template-columns:repeat(2, 1fr);
-      }
-
-      .nav{
-        flex-direction:column;
-      }
-    }
-
-    @media (max-width: 640px){
-      .flavors{
-        grid-template-columns:1fr;
-      }
-
-      .mini-grid{
+      .features{
         grid-template-columns:1fr;
       }
 
@@ -531,17 +544,50 @@
         padding-top:40px;
       }
 
-      .hero-actions{
-        flex-direction:column;
+      .hero-visual{
+        min-height:520px;
+        margin-top:10px;
       }
 
-      .btn{
+      .band-buttons{
+        justify-content:flex-start;
+      }
+    }
+
+    @media (max-width: 640px){
+      .nav{
+        flex-wrap:wrap;
+      }
+
+      .nav-links{
         width:100%;
-        text-align:center;
+        justify-content:center;
+        order:3;
       }
 
-      .price{
-        font-size:1.7rem;
+      .hero h1{
+        font-size:2.3rem;
+      }
+
+      .circle-card.large{
+        width:220px;
+        height:220px;
+        top:150px;
+      }
+
+      .circle-card.top-right,
+      .circle-card.bottom-left{
+        width:150px;
+        height:150px;
+      }
+
+      .price-badge{
+        top:110px;
+        left:10px;
+      }
+
+      .hero-visual{
+        min-height:430px;
       }
     }
   </style>
@@ -550,14 +596,20 @@
 
   <header>
     <div class="container nav">
-      <div class="logo">Beignets <span>Pop Cake</span></div>
+      <a href="#" class="logo">
+        <span class="logo-badge">J</span>
+        <span>JEMIMA</span>
+      </a>
+
       <nav class="nav-links">
         <a href="#accueil">Accueil</a>
-        <a href="#saveurs">Saveurs</a>
-        <a href="#tarifs">Tarifs</a>
-        <a href="#livraison">Livraison</a>
-        <a href="#contact" class="btn btn-primary">Commander</a>
+        <a href="#qualites">Qualités</a>
+        <a href="#contact">Contacts</a>
       </nav>
+
+      <a class="nav-cta" href="https://wa.me/2250555952172" target="_blank" rel="noopener">
+        WhatsApp
+      </a>
     </div>
   </header>
 
@@ -565,223 +617,172 @@
     <section class="hero" id="accueil">
       <div class="container hero-grid">
         <div>
-          <div class="tag">Faits maison avec amour 💖</div>
-          <h1>Des <span>beignets pop cake</span> moelleux, gourmands et irrésistibles</h1>
+          <div class="eyebrow">Chez JEMIMA</div>
+          <h1>
+            Bracelet <span>Brésilien</span>
+          </h1>
           <p>
-            À chaque saveur, une douceur à partager ! Découvrez nos beignets faits maison,
-            préparés avec passion pour vous offrir une bouchée de pur plaisir à Abidjan.
+            Découvrez un bracelet élégant, résistant et durable, parfait pour compléter
+            votre style au quotidien. Un design inspiré de l’affiche publicitaire,
+            transformé ici en site vitrine moderne.
           </p>
 
           <div class="hero-actions">
-            <a href="tel:0748241778" class="btn btn-primary">📞 Commander maintenant</a>
-            <a href="#tarifs" class="btn btn-outline">Voir les tarifs</a>
-          </div>
-
-          <div class="hero-points">
-            <span>🍩 Nature</span>
-            <span>🍫 Chocolat</span>
-            <span>🍓 Fraise</span>
-            <span>🖤 Oreo</span>
-            <span>✨ Biscoff</span>
-          </div>
-        </div>
-
-        <div class="hero-card">
-          <div class="preview-box">
-            <div class="preview-title">
-              <h3>Nos saveurs vedettes</h3>
-              <div class="badge-smile">Une bouchée = un sourire 😍</div>
-            </div>
-
-            <div class="mini-grid">
-              <div class="mini-card nature">Nature</div>
-              <div class="mini-card choco">Chocolat</div>
-              <div class="mini-card biscoff">Biscoff</div>
-              <div class="mini-card oreo">Oreo</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="saveurs">
-      <div class="container">
-        <div class="section-head">
-          <h2>Nos délicieuses saveurs</h2>
-          <p>
-            Craquez pour des recettes simples, fondantes et généreuses,
-            pensées pour tous les goûts.
-          </p>
-        </div>
-
-        <div class="flavors">
-          <article class="flavor-card">
-            <div class="flavor-icon" style="background:#d7a977;">🍩</div>
-            <h3>Nature</h3>
-            <p>Simple et délicieux, parfait pour les amateurs d’authenticité.</p>
-          </article>
-
-          <article class="flavor-card">
-            <div class="flavor-icon" style="background:#6b3e2e;">🍫</div>
-            <h3>Chocolat</h3>
-            <p>Gourmand et fondant, pour les vrais fans de cacao.</p>
-          </article>
-
-          <article class="flavor-card">
-            <div class="flavor-icon" style="background:#ef7f9a;">🍓</div>
-            <h3>Fraise</h3>
-            <p>Fruitée et sucrée, avec une touche douce et fraîche.</p>
-          </article>
-
-          <article class="flavor-card">
-            <div class="flavor-icon" style="background:#494949;">🖤</div>
-            <h3>Oreo</h3>
-            <p>Croustillant et crémeux, un mélange très réconfortant.</p>
-          </article>
-
-          <article class="flavor-card">
-            <div class="flavor-icon" style="background:#b86a36;">✨</div>
-            <h3>Biscoff</h3>
-            <p>Caramélisé et addictif, avec une saveur chaleureuse.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="tarifs">
-      <div class="container">
-        <div class="section-head">
-          <h2>Tarifs & formules</h2>
-          <p>
-            Choisissez l’offre qui correspond à votre envie du moment.
-          </p>
-        </div>
-
-        <div class="pricing-grid">
-          <article class="price-card">
-            <div class="top">
-              <h3>Formule Nature</h3>
-              <span class="chip">20 pièces</span>
-            </div>
-            <div class="price">1000 FCFA <small>/ lot</small></div>
-            <ul>
-              <li>✔ 20 beignets nature</li>
-              <li>✔ Texture moelleuse</li>
-              <li>✔ Idéal pour les petites envies</li>
-            </ul>
-            <a href="tel:0748241778" class="btn btn-outline">Commander</a>
-          </article>
-
-          <article class="price-card highlight">
-            <div class="top">
-              <h3>Nature + Chocolat</h3>
-              <span class="chip">20 pièces</span>
-            </div>
-            <div class="price">1500 FCFA <small>/ lot</small></div>
-            <ul>
-              <li>✔ 20 pièces gourmandes</li>
-              <li>✔ Nature avec chocolat</li>
-              <li>✔ Le meilleur équilibre douceur/plaisir</li>
-            </ul>
-            <a href="tel:0748241778" class="btn btn-primary">Choisir cette offre</a>
-          </article>
-
-          <article class="price-card">
-            <div class="top">
-              <h3>Parfums variés</h3>
-              <span class="chip">Dès 2500 FCFA</span>
-            </div>
-            <div class="price">2500 FCFA <small>à partir de</small></div>
-            <ul>
-              <li>✔ Plusieurs saveurs disponibles</li>
-              <li>✔ Idéal pour événements & partage</li>
-              <li>✔ Personnalisation selon disponibilité</li>
-            </ul>
-            <a href="tel:0748241778" class="btn btn-outline">Demander un devis</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="promo">
-          <div>
-            <h2>Promo spéciale 🎉</h2>
-            <p>
-              Faites-vous plaisir encore plus : pour toute commande,
-              profitez de notre offre du moment.
-            </p>
-            <a href="tel:0748241778" class="btn btn-primary">J’en profite</a>
-          </div>
-
-          <div class="promo-box">
-            <strong>OFFRE DU MOMENT</strong>
-            <div class="free">5 achetés = 1 offert</div>
-            <p>Une occasion parfaite pour partager encore plus de douceur 💕</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="livraison">
-      <div class="container">
-        <div class="section-head">
-          <h2>Commande & livraison</h2>
-          <p>
-            Disponible à Abidjan avec livraison possible dans toute la ville.
-          </p>
-        </div>
-
-        <div class="info-grid">
-          <div class="info-card">
-            <h3>📍 Zone</h3>
-            <p>Disponible à Abidjan, avec service de livraison selon votre localisation.</p>
-          </div>
-
-          <div class="info-card">
-            <h3>🚚 Livraison</h3>
-            <p>Livraison possible, rapide et sans stress, pour recevoir vos douceurs facilement.</p>
-          </div>
-
-          <div class="info-card">
-            <h3>📞 Contact</h3>
-            <p>
-              Commandez directement au <strong>0748241778</strong> pour plus d’informations
-              ou pour réserver votre lot.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <div class="cta">
-          <h2>Prêt(e) à commander ?</h2>
-          <p>
-            Fait maison, fait avec passion, pour votre plaisir !
-            Contactez-nous dès maintenant pour vos commandes de beignets pop cake.
-          </p>
-          <div class="hero-actions" style="justify-content:center;">
-            <a href="tel:0748241778" class="btn btn-primary">📲 Appeler maintenant</a>
-            <a href="https://wa.me/2250748241778" class="btn btn-outline" target="_blank" rel="noopener">
-              WhatsApp
+            <a href="https://wa.me/2250555952172" target="_blank" rel="noopener" class="btn btn-primary">
+              Commander sur WhatsApp
+            </a>
+            <a href="tel:0555952172" class="btn btn-secondary">
+              Appeler maintenant
             </a>
           </div>
+
+          <div class="hero-meta">
+            <div class="chip">✨ Beau</div>
+            <div class="chip">🛡️ Solide</div>
+            <div class="chip">♻️ Durable</div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="shape one"></div>
+          <div class="shape two"></div>
+
+          <div class="gallery">
+            <div class="price-badge">
+              <small>Prix</small>
+              <strong>500f</strong>
+            </div>
+
+            <!-- Remplace ces images par tes vraies photos produit -->
+            <div class="circle-card top-right">
+              <img src="https://www.genspark.ai/api/files/s/68JCXmud" alt="Bracelet brésilien JEMIMA" />
+            </div>
+
+            <div class="circle-card large">
+              <img src="https://www.genspark.ai/api/files/s/68JCXmud" alt="Bracelet brésilien artisanal" />
+            </div>
+
+            <div class="circle-card bottom-left">
+              <img src="https://www.genspark.ai/api/files/s/68JCXmud" alt="Collection bracelet brésilien" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="qualites">
+      <div class="container">
+        <div class="section-title">
+          <h2>Pourquoi choisir ce bracelet ?</h2>
+          <p>
+            Un accessoire pensé pour allier esthétique, tenue dans le temps et simplicité.
+            Idéal pour offrir ou pour se faire plaisir.
+          </p>
+        </div>
+
+        <div class="features">
+          <article class="feature-card">
+            <div class="feature-icon">💎</div>
+            <h3>Beau</h3>
+            <p>
+              Un style coloré et soigné qui attire le regard et s’adapte à plusieurs tenues.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>Solide</h3>
+            <p>
+              Une conception pensée pour une bonne résistance au quotidien.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">🌿</div>
+            <h3>Durable</h3>
+            <p>
+              Un bracelet fait pour durer et rester agréable à porter dans le temps.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="container">
+        <div class="band-box">
+          <div>
+            <h3>Bracelet Brésilien chez JEMIMA</h3>
+            <p>
+              Commandez maintenant et obtenez un bracelet au design simple, beau et pratique,
+              au prix accessible de <strong>500f</strong>.
+            </p>
+          </div>
+
+          <div class="band-buttons">
+            <a href="https://wa.me/2250555952172" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="tel:0555952172">Appel</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-card">
+          <h3>Nos contacts</h3>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <div>📱</div>
+              <div>
+                <strong>WhatsApp & Appel</strong>
+                <span>05 55 95 21 72</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div>💰</div>
+              <div>
+                <strong>Prix</strong>
+                <span>500f</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-actions">
+            <a href="https://wa.me/2250555952172" target="_blank" rel="noopener" class="btn whatsapp">
+              Écrire sur WhatsApp
+            </a>
+            <a href="tel:0555952172" class="btn call">
+              Lancer un appel
+            </a>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h3>Informations produit</h3>
+          <ul>
+            <li>Bracelet brésilien</li>
+            <li>Style artisanal et coloré</li>
+            <li>Design inspiré de l’affiche d’origine</li>
+            <li>Produit mis en avant : beau, solide, durable</li>
+          </ul>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      <p>
-        © 2026 Beignets Pop Cake — Faits maison avec amour 💖<br>
-        Inspiré de votre visuel de référence. <a href="tel:0748241778">0748241778</a>
-      </p>
+    <div class="container footer-wrap">
+      <p><strong>JEMIMA</strong> — Bracelet Brésilien</p>
+      <p id="year"></p>
     </div>
   </footer>
 
+  <script>
+    document.getElementById("year").textContent =
+      "© " + new Date().getFullYear() + " Tous droits réservés";
+  </script>
 </body>
 </html>
