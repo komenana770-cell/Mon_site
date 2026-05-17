@@ -3,28 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thelly_Éros Store</title>
-  <meta name="description" content="Boutique spécialisée dans la vente d’articles féminins : lingerie, pyjamas, nuisettes, ensembles, sacs et chaussures." />
+  <title>MAILLOT STORE CI - Boutique WhatsApp</title>
+  <meta
+    name="description"
+    content="Boutique en ligne MAILLOT STORE CI : maillot domicile orange et maillot extérieur blanc. Commande directe sur WhatsApp."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <style>
     :root{
-      --bg:#0b0f0d;
-      --card:#111715;
-      --soft:#1a221f;
-      --green:#1f8b4c;
-      --green-light:#45c777;
-      --gold:#f6d77b;
-      --text:#f5f7f6;
-      --muted:#b8c2bc;
-      --border:rgba(255,255,255,0.08);
-      --shadow:0 12px 30px rgba(0,0,0,0.28);
-      --radius:20px;
+      --orange:#f47b10;
+      --orange-dark:#d96400;
+      --green:#14834f;
+      --green-dark:#0f623b;
+      --ivory:#f8ead7;
+      --cream:#fff8f0;
+      --brown:#341b10;
+      --text:#231f1c;
+      --muted:#74665d;
+      --white:#ffffff;
+      --card:#fffaf5;
+      --shadow:0 18px 40px rgba(52,27,16,.12);
+      --radius:24px;
+      --whatsapp:#25D366;
     }
 
     *{
       margin:0;
       padding:0;
       box-sizing:border-box;
-      font-family: "Segoe UI", Roboto, Arial, sans-serif;
     }
 
     html{
@@ -32,104 +41,180 @@
     }
 
     body{
-      background:
-        radial-gradient(circle at top left, rgba(69,199,119,0.10), transparent 35%),
-        linear-gradient(180deg, #0d120f 0%, #090c0b 100%);
+      font-family:"Poppins", sans-serif;
       color:var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(20,131,79,.16), transparent 18%),
+        radial-gradient(circle at top right, rgba(244,123,16,.16), transparent 22%),
+        linear-gradient(180deg, #f6e6d3 0%, #f9efe3 100%);
       line-height:1.6;
     }
 
-    .container{
-      width:min(100% - 24px, 1100px);
-      margin:auto;
+    a{
+      text-decoration:none;
+      color:inherit;
     }
 
-    .topbar{
+    img{
+      display:block;
+      max-width:100%;
+    }
+
+    .container{
+      width:min(1180px, calc(100% - 32px));
+      margin-inline:auto;
+    }
+
+    .section{
+      padding:72px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:32px;
+    }
+
+    .section-title h2{
+      font-size:clamp(1.8rem, 3vw, 2.8rem);
+      color:var(--brown);
+      font-weight:900;
+      margin-bottom:10px;
+      text-transform:uppercase;
+    }
+
+    .section-title p{
+      max-width:760px;
+      margin:0 auto;
+      color:var(--muted);
+    }
+
+    /* HEADER */
+    header{
       position:sticky;
       top:0;
-      z-index:1000;
-      backdrop-filter: blur(10px);
-      background:rgba(11,15,13,0.75);
-      border-bottom:1px solid var(--border);
+      z-index:100;
+      background:rgba(255,248,240,.88);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(52,27,16,.08);
     }
 
     .nav{
       display:flex;
-      align-items:center;
       justify-content:space-between;
-      padding:14px 0;
+      align-items:center;
+      gap:20px;
+      padding:16px 0;
     }
 
-    .brand{
-      font-size:1rem;
-      font-weight:800;
-      letter-spacing:.4px;
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:900;
+      color:var(--brown);
+      letter-spacing:.3px;
     }
 
-    .brand span{
-      color:var(--green-light);
-    }
-
-    .nav a{
-      text-decoration:none;
-      color:var(--text);
-      margin-left:14px;
-      font-size:.92rem;
-    }
-
-    .hero{
-      padding:38px 0 24px;
-    }
-
-    .hero-box{
-      background:linear-gradient(135deg, rgba(31,139,76,0.18), rgba(255,255,255,0.03));
-      border:1px solid var(--border);
-      border-radius:28px;
-      box-shadow:var(--shadow);
-      padding:28px 20px;
-      overflow:hidden;
-      position:relative;
-    }
-
-    .hero-box::after{
-      content:"";
-      position:absolute;
-      width:180px;
-      height:180px;
-      background:rgba(69,199,119,0.12);
+    .logo-badge{
+      width:46px;
+      height:46px;
       border-radius:50%;
-      right:-40px;
-      top:-40px;
-      filter:blur(10px);
+      display:grid;
+      place-items:center;
+      color:#fff;
+      background:linear-gradient(135deg, var(--orange), var(--green));
+      box-shadow:var(--shadow);
+      font-weight:800;
     }
 
-    .badge{
-      display:inline-block;
-      background:rgba(69,199,119,0.12);
-      color:var(--green-light);
-      border:1px solid rgba(69,199,119,0.25);
-      padding:8px 14px;
+    .nav-links{
+      display:flex;
+      gap:22px;
+      align-items:center;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    .nav-links a:hover{
+      color:var(--green-dark);
+    }
+
+    .nav-buttons{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .mini-btn{
+      padding:11px 16px;
       border-radius:999px;
-      font-size:.85rem;
+      font-weight:700;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .mini-btn.call{
+      background:#fff;
+      border:1px solid rgba(52,27,16,.12);
+      color:var(--brown);
+    }
+
+    .mini-btn.wa{
+      background:var(--whatsapp);
+      color:#fff;
+      box-shadow:0 12px 24px rgba(37,211,102,.22);
+    }
+
+    /* HERO */
+    .hero{
+      padding:72px 0 34px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:30px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 16px;
+      border-radius:999px;
+      background:rgba(20,131,79,.10);
+      color:var(--green-dark);
+      font-weight:700;
+      margin-bottom:18px;
+    }
+
+    .hero h1{
+      font-size:clamp(2.5rem, 5vw, 5rem);
+      line-height:1;
+      font-weight:900;
+      color:var(--brown);
+      text-transform:uppercase;
       margin-bottom:16px;
     }
 
-    h1{
-      font-size:2rem;
-      line-height:1.15;
-      margin-bottom:14px;
+    .hero h1 span{
+      color:var(--orange-dark);
     }
 
     .hero p{
+      max-width:620px;
       color:var(--muted);
-      font-size:1rem;
-      margin-bottom:22px;
+      font-size:1.02rem;
+      margin-bottom:24px;
     }
 
-    .cta-group{
+    .hero-actions{
       display:flex;
       flex-wrap:wrap;
-      gap:12px;
+      gap:14px;
+      margin-bottom:20px;
     }
 
     .btn{
@@ -137,408 +222,623 @@
       align-items:center;
       justify-content:center;
       gap:10px;
-      padding:14px 18px;
-      border-radius:14px;
-      text-decoration:none;
-      font-weight:700;
-      transition:.25s ease;
-      border:1px solid transparent;
-    }
-
-    .btn-primary{
-      background:linear-gradient(135deg, var(--green), var(--green-light));
-      color:white;
-      box-shadow:0 8px 20px rgba(31,139,76,0.32);
-    }
-
-    .btn-primary:hover{
-      transform:translateY(-2px);
-    }
-
-    .btn-secondary{
-      background:transparent;
-      color:var(--text);
-      border-color:var(--border);
-    }
-
-    .section{
-      padding:24px 0;
-    }
-
-    .section-title{
-      font-size:1.45rem;
-      margin-bottom:10px;
-    }
-
-    .section-text{
-      color:var(--muted);
-      margin-bottom:18px;
-    }
-
-    .grid{
-      display:grid;
-      gap:16px;
-    }
-
-    .services{
-      grid-template-columns:1fr;
-    }
-
-    .card{
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      padding:18px;
-      box-shadow:var(--shadow);
-    }
-
-    .card h3{
-      font-size:1.05rem;
-      margin-bottom:8px;
-    }
-
-    .card p{
-      color:var(--muted);
-      font-size:.95rem;
-    }
-
-    .icon{
-      width:48px;
-      height:48px;
-      display:grid;
-      place-items:center;
-      border-radius:14px;
-      margin-bottom:14px;
-      background:rgba(69,199,119,0.10);
-      border:1px solid rgba(69,199,119,0.18);
-      font-size:1.4rem;
-    }
-
-    .catalogue{
-      grid-template-columns:1fr;
-    }
-
-    .product{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:18px;
-      padding:14px;
-    }
-
-    .thumb{
-      min-width:68px;
-      width:68px;
-      height:68px;
-      border-radius:16px;
-      background:linear-gradient(135deg, rgba(246,215,123,0.25), rgba(69,199,119,0.18));
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:1.5rem;
-    }
-
-    .product-info{
-      flex:1;
-    }
-
-    .product-info h4{
-      font-size:1rem;
-      margin-bottom:4px;
-    }
-
-    .product-info p{
-      color:var(--muted);
-      font-size:.9rem;
-    }
-
-    .plus{
-      min-width:42px;
-      width:42px;
-      height:42px;
-      border-radius:12px;
+      padding:14px 22px;
       border:none;
-      background:#222a26;
-      color:#fff;
-      font-size:1.3rem;
+      border-radius:999px;
+      font-weight:800;
+      transition:.25s ease;
       cursor:pointer;
     }
 
-    .about{
+    .btn:hover{
+      transform:translateY(-2px);
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg, var(--orange), var(--orange-dark));
+      color:#fff;
+      box-shadow:0 16px 30px rgba(244,123,16,.24);
+    }
+
+    .btn-whatsapp{
+      background:var(--whatsapp);
+      color:#fff;
+      box-shadow:0 16px 30px rgba(37,211,102,.24);
+    }
+
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .chip{
+      background:#fff;
+      color:var(--brown);
+      border-radius:999px;
+      padding:10px 14px;
+      font-weight:700;
+      border:1px solid rgba(52,27,16,.08);
+      box-shadow:0 8px 18px rgba(0,0,0,.04);
+    }
+
+    .hero-poster{
+      position:relative;
+      background:linear-gradient(180deg, #fff5e8 0%, #fffaf5 100%);
+      border-radius:30px;
+      padding:16px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(52,27,16,.08);
+    }
+
+    .hero-poster img{
+      width:100%;
+      border-radius:22px;
+      object-fit:cover;
+    }
+
+    .floating-badge{
+      position:absolute;
+      right:16px;
+      top:16px;
+      width:110px;
+      height:110px;
+      border-radius:50%;
+      background:linear-gradient(135deg, var(--green), var(--green-dark));
+      color:#fff;
       display:grid;
+      place-items:center;
+      text-align:center;
+      font-weight:800;
+      line-height:1.15;
+      padding:12px;
+      border:6px solid rgba(255,255,255,.8);
+      box-shadow:0 16px 30px rgba(0,0,0,.16);
+    }
+
+    /* PRODUCTS */
+    .products-grid{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:24px;
+      margin-bottom:30px;
+    }
+
+    .product-card{
+      background:var(--card);
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(52,27,16,.08);
+      transition:.2s ease;
+      position:relative;
+    }
+
+    .product-card.active{
+      outline:3px solid rgba(20,131,79,.25);
+      transform:translateY(-3px);
+    }
+
+    .product-visual{
+      min-height:300px;
+      display:grid;
+      place-items:center;
+      padding:24px;
+      position:relative;
+    }
+
+    .product-visual.orange{
+      background:
+        radial-gradient(circle at top right, rgba(255,255,255,.18), transparent 20%),
+        linear-gradient(135deg, #ff8c1d, #ef6900);
+    }
+
+    .product-visual.white{
+      background:
+        radial-gradient(circle at top right, rgba(20,131,79,.14), transparent 24%),
+        linear-gradient(135deg, #ffffff, #eef9f2);
+    }
+
+    .jersey{
+      width:220px;
+      height:240px;
+      position:relative;
+      border-radius:26px 26px 40px 40px;
+      box-shadow:0 18px 30px rgba(0,0,0,.14);
+      overflow:hidden;
+    }
+
+    .jersey.orange{
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,180,80,.25), transparent 14%),
+        radial-gradient(circle at 78% 32%, rgba(255,220,160,.16), transparent 18%),
+        repeating-linear-gradient(
+          45deg,
+          rgba(255,255,255,.07) 0 8px,
+          rgba(255,255,255,0) 8px 18px
+        ),
+        #f26e00;
+    }
+
+    .jersey.white{
+      background:
+        radial-gradient(circle at 30% 30%, rgba(20,131,79,.16), transparent 13%),
+        radial-gradient(circle at 68% 56%, rgba(20,131,79,.12), transparent 17%),
+        linear-gradient(135deg, #ffffff, #f3fbf6);
+      border:1px solid rgba(20,131,79,.12);
+    }
+
+    .jersey::before,
+    .jersey::after{
+      content:"";
+      position:absolute;
+      top:24px;
+      width:58px;
+      height:78px;
+      border-radius:20px;
+      background:inherit;
+    }
+
+    .jersey::before{
+      left:-34px;
+      transform:rotate(28deg);
+    }
+
+    .jersey::after{
+      right:-34px;
+      transform:rotate(-28deg);
+    }
+
+    .logo-mark, .crest{
+      position:absolute;
+      top:58px;
+      width:34px;
+      height:34px;
+      border-radius:10px;
+      display:grid;
+      place-items:center;
+      background:rgba(255,255,255,.84);
+      font-size:.72rem;
+      font-weight:800;
+      box-shadow:0 8px 12px rgba(0,0,0,.08);
+    }
+
+    .logo-mark{
+      left:34px;
+      color:var(--orange-dark);
+    }
+
+    .crest{
+      right:34px;
+      color:var(--green-dark);
+    }
+
+    .product-body{
+      padding:22px;
+    }
+
+    .product-label{
+      display:inline-block;
+      background:#fff;
+      color:var(--brown);
+      border:2px solid rgba(52,27,16,.1);
+      padding:10px 14px;
+      border-radius:18px;
+      font-weight:900;
+      text-transform:uppercase;
+      line-height:1.25;
+      margin-bottom:12px;
+    }
+
+    .product-body p{
+      color:var(--muted);
+      margin-bottom:16px;
+    }
+
+    .product-footer{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .product-price{
+      font-weight:900;
+      color:var(--brown);
+      font-size:1.15rem;
+    }
+
+    .choose-btn{
+      background:linear-gradient(135deg, var(--green), var(--green-dark));
+      color:#fff;
+      border:none;
+      border-radius:999px;
+      padding:12px 18px;
+      font-weight:800;
+      cursor:pointer;
+    }
+
+    /* ORDER PANEL */
+    .order-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:24px;
+      align-items:start;
+    }
+
+    .order-card,
+    .info-card{
+      background:#fff;
+      border-radius:30px;
+      padding:28px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(52,27,16,.08);
+    }
+
+    .order-card h3,
+    .info-card h3{
+      color:var(--brown);
+      font-size:1.5rem;
+      font-weight:900;
+      margin-bottom:18px;
+      text-transform:uppercase;
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
       gap:16px;
     }
 
-    .highlight{
-      background:linear-gradient(135deg, rgba(246,215,123,0.10), rgba(255,255,255,0.03));
-      border:1px solid rgba(246,215,123,0.18);
+    .field{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
     }
 
-    .whatsapp-box{
-      text-align:center;
-      padding:26px 18px;
-      background:linear-gradient(135deg, rgba(31,139,76,0.18), rgba(69,199,119,0.10));
-      border:1px solid rgba(69,199,119,0.22);
-      border-radius:24px;
-      box-shadow:var(--shadow);
+    .field.full{
+      grid-column:1 / -1;
     }
 
-    .whatsapp-box h2{
-      font-size:1.35rem;
-      margin-bottom:10px;
-    }
-
-    .whatsapp-box p{
-      color:var(--muted);
-      margin-bottom:18px;
-    }
-
-    footer{
-      padding:28px 0 40px;
-      color:var(--muted);
-      text-align:center;
-      font-size:.92rem;
-    }
-
-    .footer-brand{
-      color:var(--text);
+    label{
       font-weight:700;
+      color:var(--brown);
+      font-size:.96rem;
+    }
+
+    input, select, textarea{
+      width:100%;
+      border:1px solid rgba(52,27,16,.12);
+      border-radius:16px;
+      padding:14px 16px;
+      font:inherit;
+      outline:none;
+      background:#fffdfb;
+    }
+
+    input:focus, select:focus, textarea:focus{
+      border-color:rgba(20,131,79,.45);
+      box-shadow:0 0 0 4px rgba(20,131,79,.08);
+    }
+
+    textarea{
+      min-height:110px;
+      resize:vertical;
+    }
+
+    .summary{
+      margin-top:20px;
+      background:linear-gradient(135deg, #fff4e8, #fffaf6);
+      border:1px dashed rgba(52,27,16,.14);
+      border-radius:22px;
+      padding:18px;
+      display:grid;
+      gap:10px;
+    }
+
+    .summary-row{
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      align-items:center;
+      color:var(--text);
+      font-weight:600;
+    }
+
+    .summary-row strong{
+      color:var(--brown);
+      font-size:1.1rem;
+    }
+
+    .notice{
+      margin-top:16px;
+      color:var(--muted);
+      font-size:.94rem;
+    }
+
+    .order-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:20px;
+    }
+
+    .order-actions .btn{
+      flex:1 1 220px;
+    }
+
+    .btn-call{
+      background:#fff;
+      color:var(--brown);
+      border:1px solid rgba(52,27,16,.14);
+      box-shadow:0 10px 24px rgba(52,27,16,.08);
+    }
+
+    .bullet-list{
+      list-style:none;
+      display:grid;
+      gap:12px;
+      margin-top:10px;
+    }
+
+    .bullet-list li{
+      background:rgba(20,131,79,.06);
+      border-left:4px solid var(--green);
+      border-radius:14px;
+      padding:14px 14px;
+      color:var(--text);
+      font-weight:500;
+    }
+
+    .pricing-mini{
+      margin-top:18px;
+      background:#fff8f0;
+      border-radius:18px;
+      padding:16px;
+      border:1px dashed rgba(244,123,16,.22);
+    }
+
+    .pricing-mini p{
       margin-bottom:8px;
+      color:var(--brown);
+      font-weight:700;
     }
 
-    @media (min-width: 700px){
-      .hero-box{
-        padding:42px 34px;
-      }
+    /* FOOTER */
+    footer{
+      margin-top:24px;
+      background:linear-gradient(135deg, #16633b, #0f4c2c);
+      color:rgba(255,255,255,.94);
+      padding:26px 0;
+    }
 
-      h1{
-        font-size:3rem;
-      }
+    .footer-wrap{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      flex-wrap:wrap;
+    }
 
-      .services{
-        grid-template-columns:repeat(2, 1fr);
-      }
-
-      .catalogue{
-        grid-template-columns:repeat(2, 1fr);
-      }
-
-      .about{
-        grid-template-columns:1.2fr .8fr;
+    /* RESPONSIVE */
+    @media (max-width: 980px){
+      .hero-grid,
+      .order-grid,
+      .products-grid{
+        grid-template-columns:1fr;
       }
     }
 
-    @media (min-width: 980px){
-      .services{
-        grid-template-columns:repeat(4, 1fr);
+    @media (max-width: 760px){
+      .nav{
+        flex-wrap:wrap;
       }
 
-      .catalogue{
-        grid-template-columns:repeat(3, 1fr);
+      .nav-links{
+        width:100%;
+        justify-content:center;
+        order:3;
       }
 
-      .brand{
-        font-size:1.1rem;
+      .form-grid{
+        grid-template-columns:1fr;
+      }
+
+      .floating-badge{
+        width:90px;
+        height:90px;
+        font-size:.8rem;
+      }
+
+      .jersey{
+        width:180px;
+        height:210px;
+      }
+
+      .product-visual{
+        min-height:250px;
+      }
+
+      .hero{
+        padding-top:42px;
       }
     }
   </style>
 </head>
 <body>
 
-  <header class="topbar">
+  <header>
     <div class="container nav">
-      <div class="brand">Thelly_<span>Éros Store</span></div>
-      <nav>
-        <a href="#services">Services</a>
-        <a href="#catalogue">Catalogue</a>
-        <a href="#contact">WhatsApp</a>
+      <a href="#accueil" class="logo">
+        <span class="logo-badge">CI</span>
+        <span>MAILLOT STORE CI</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#produits">Produits</a>
+        <a href="#commande">Commander</a>
+        <a href="#infos">Infos</a>
       </nav>
+
+      <div class="nav-buttons">
+        <a class="mini-btn call" href="tel:+2250711446631">📞 Appel</a>
+        <a class="mini-btn wa" id="navWhatsapp" href="#" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <div class="hero-box">
-        <div class="badge">Boutique féminine • Élégance • Confort</div>
-        <h1>Révélez votre style avec élégance ✨</h1>
-        <p>
-          Bienvenue chez <strong>Thelly_Éros Store</strong>, votre boutique dédiée aux articles féminins :
-          lingerie, pyjamas, nuisettes, ensembles, sacs et chaussures. Une sélection chic,
-          tendance et pensée pour sublimer votre féminité.
-        </p>
+  <main>
+    <section class="hero" id="accueil">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">🇨🇮 CÔTE D’IVOIRE • BOUTIQUE OFFRE MATCH</div>
+          <h1>Maillot <span>Store CI</span></h1>
+          <p>
+            Commandez facilement votre maillot Côte d’Ivoire avec une expérience type
+            e-commerce : choix du modèle, quantité, calcul du total et envoi direct
+            sur WhatsApp.
+          </p>
 
-        <div class="cta-group">
-          <a class="btn btn-primary" href="https://wa.me/" target="_blank">
-            💬 Commander sur WhatsApp
-          </a>
-          <a class="btn btn-secondary" href="#catalogue">
-            Voir le catalogue
-          </a>
+          <div class="hero-actions">
+            <a href="#commande" class="btn btn-primary">Acheter maintenant</a>
+            <a href="#" id="heroWhatsapp" class="btn btn-whatsapp" target="_blank" rel="noopener">
+              Commander sur WhatsApp
+            </a>
+          </div>
+
+          <div class="chips">
+            <span class="chip">Tissus de qualité</span>
+            <span class="chip">Flocage durable</span>
+            <span class="chip">Confort absolu</span>
+            <span class="chip">Disponible à Abidjan</span>
+          </div>
+        </div>
+
+        <div class="hero-poster">
+          <span class="floating-badge">UNE PASSION<br>UN SOURIRE 😍</span>
+          <img src="https://www.genspark.ai/api/files/s/WiagXplx" alt="Affiche MAILLOT STORE CI" />
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" id="services">
-    <div class="container">
-      <h2 class="section-title">Nos services</h2>
-      <p class="section-text">
-        Une boutique moderne pensée pour offrir une expérience simple, rapide et féminine,
-        directement depuis le mobile.
-      </p>
-
-      <div class="grid services">
-        <div class="card">
-          <div class="icon">👗</div>
-          <h3>Lingerie féminine</h3>
+    <section class="section" id="produits">
+      <div class="container">
+        <div class="section-title">
+          <h2>Choisissez votre maillot</h2>
           <p>
-            Des modèles séduisants, élégants et confortables pour toutes les envies.
+            Sélectionnez un modèle puis indiquez la quantité pour générer votre commande
+            WhatsApp automatiquement.
           </p>
         </div>
 
-        <div class="card">
-          <div class="icon">🛏️</div>
-          <h3>Pyjamas & nuisettes</h3>
-          <p>
-            Des tenues de nuit chic, douces et tendance pour allier confort et style.
-          </p>
-        </div>
+        <div class="products-grid">
+          <article class="product-card active" data-product="Maillot domicile orange">
+            <div class="product-visual orange">
+              <div class="jersey orange">
+                <span class="logo-mark">P</span>
+                <span class="crest">CI</span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-label">Le maillot domicile orange</div>
+              <p>
+                Le modèle fort et emblématique pour représenter fièrement les couleurs
+                ivoiriennes.
+              </p>
+              <div class="product-footer">
+                <span class="product-price">8 000 FCFA</span>
+                <button class="choose-btn" data-select="Maillot domicile orange">Choisir ce maillot</button>
+              </div>
+            </div>
+          </article>
 
-        <div class="card">
-          <div class="icon">👜</div>
-          <h3>Accessoires mode</h3>
-          <p>
-            Sacs, chaussures et articles sélectionnés pour compléter votre look avec goût.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="icon">📱</div>
-          <h3>Commande rapide</h3>
-          <p>
-            Passez facilement vos commandes via WhatsApp avec un service simple et direct.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="catalogue">
-    <div class="container">
-      <h2 class="section-title">Catégories phares</h2>
-      <p class="section-text">
-        Découvrez quelques univers populaires de la boutique, dans un style glamour et raffiné.
-      </p>
-
-      <div class="grid catalogue">
-        <div class="product">
-          <div class="thumb">🖤</div>
-          <div class="product-info">
-            <h4>Femme fatale</h4>
-            <p>Pièces audacieuses, élégantes et irrésistibles.</p>
-          </div>
-          <button class="plus">+</button>
-        </div>
-
-        <div class="product">
-          <div class="thumb">🌸</div>
-          <div class="product-info">
-            <h4>Chic pyjamas</h4>
-            <p>Le confort de nuit dans un style raffiné.</p>
-          </div>
-          <button class="plus">+</button>
-        </div>
-
-        <div class="product">
-          <div class="thumb">💗</div>
-          <div class="product-info">
-            <h4>Nuisette courte</h4>
-            <p>Féminine, légère et séduisante pour vos soirées.</p>
-          </div>
-          <button class="plus">+</button>
-        </div>
-
-        <div class="product">
-          <div class="thumb">✨</div>
-          <div class="product-info">
-            <h4>Nuisette longue</h4>
-            <p>Un style élégant, fluide et glamour.</p>
-          </div>
-          <button class="plus">+</button>
-        </div>
-
-        <div class="product">
-          <div class="thumb">🩷</div>
-          <div class="product-info">
-            <h4>Ensemble pyjama</h4>
-            <p>Des ensembles doux et stylés pour le quotidien.</p>
-          </div>
-          <button class="plus">+</button>
-        </div>
-
-        <div class="product">
-          <div class="thumb">🛍️</div>
-          <div class="product-info">
-            <h4>Ensemble culotte</h4>
-            <p>Des modèles féminins pour valoriser votre silhouette.</p>
-          </div>
-          <button class="plus">+</button>
+          <article class="product-card" data-product="Maillot extérieur blanc">
+            <div class="product-visual white">
+              <div class="jersey white">
+                <span class="logo-mark">P</span>
+                <span class="crest">CI</span>
+              </div>
+            </div>
+            <div class="product-body">
+              <div class="product-label">Le maillot extérieur blanc</div>
+              <p>
+                Une version plus claire, élégante et moderne pour compléter la collection.
+              </p>
+              <div class="product-footer">
+                <span class="product-price">8 000 FCFA</span>
+                <button class="choose-btn" data-select="Maillot extérieur blanc">Choisir ce maillot</button>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="container about">
-      <div class="card">
-        <h2 class="section-title">Pourquoi choisir Thelly_Éros Store ?</h2>
-        <p class="section-text">
-          Nous mettons en avant des articles féminins sélectionnés avec soin pour leur style,
-          leur confort et leur élégance. Notre objectif est de proposer une boutique séduisante,
-          accessible et professionnelle, adaptée aux clientes modernes.
-        </p>
-        <p class="section-text">
-          Que vous cherchiez une lingerie chic, un pyjama tendance ou un accessoire mode,
-          notre boutique vous accompagne avec une présentation claire et une commande simplifiée.
-        </p>
-      </div>
+    <section class="section" id="commande">
+      <div class="container order-grid">
+        <div class="order-card">
+          <h3>Passer une commande</h3>
 
-      <div class="card highlight">
-        <h3 style="margin-bottom:10px;">Atouts de la boutique</h3>
-        <p style="color:var(--muted);">
-          ✔ Design moderne<br>
-          ✔ Affichage mobile optimisé<br>
-          ✔ Navigation simple<br>
-          ✔ Mise en valeur des catégories<br>
-          ✔ Commande rapide via WhatsApp
-        </p>
-      </div>
-    </div>
-  </section>
+          <div class="form-grid">
+            <div class="field">
+              <label for="product">Produit</label>
+              <select id="product">
+                <option value="Maillot domicile orange">Maillot domicile orange</option>
+                <option value="Maillot extérieur blanc">Maillot extérieur blanc</option>
+              </select>
+            </div>
 
-  <section class="section" id="contact">
-    <div class="container">
-      <div class="whatsapp-box">
-        <h2>Commandez directement sur WhatsApp 💚</h2>
-        <p>
-          Discutez avec la boutique, demandez les prix, les tailles et passez vos commandes
-          en toute simplicité.
-        </p>
-        <a class="btn btn-primary" href="https://wa.me/+2250141460446" target="_blank">
-          Ouvrir WhatsApp
-        </a>
-      </div>
-    </div>
-  </section>
+            <div class="field">
+              <label for="qty">Quantité</label>
+              <input id="qty" type="number" min="1" value="1" />
+            </div>
 
-  <footer>
-    <div class="container">
-      <div class="footer-brand">Thelly_Éros Store</div>
-      <p>Boutique spécialisée dans les articles féminins, lingerie, pyjamas, accessoires et plus encore.</p>
-    </div>
-  </footer>
+            <div class="field">
+              <label for="size">Taille</label>
+              <select id="size">
+                <option value="S">S</option>
+                <option value="M" selected>M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+              </select>
+            </div>
 
-</body>
-</html>
+            <div class="field">
+              <label for="city">Ville</label>
+              <input id="city" type="text" placeholder="Ex : Abidjan" />
+            </div>
+
+            <div class="field full">
+              <label for="name">Nom du client</label>
+              <input id="name" type="text" placeholder="Votre nom" />
+            </div>
+
+            <div class="field full">
+              <label for="note">Précision</label>
+              <textarea id="note" placeholder="Ex : couleur, livraison, quantité mixte, autre détail..."></textarea>
+            </div>
+          </div>
+
+          <div class="summary">
+            <div class="summary-row">
+              <span>Produit sélectionné</span>
+              <strong id="sumProduct">Maillot domicile orange</strong>
+            </div>
+            <div class="summary-row">
+              <span>Tarif appliqué</span>
+              <strong id="sumUnit">8 000 FCFA</strong>
+            </div>
+            <div class="summary-row">
+              <span>Quantité</span>
+              <strong id="sumQty">1</strong>
+            </div>
+            <div class="summary-row">
+              <span>Total estimé</span>
+              <strong id="sumTotal">8 000 FCFA</strong>
+            </div>
+          </div>
+
+          <p class="notice">
+            À partir de 10 pièces, le tarif grossiste s’a
